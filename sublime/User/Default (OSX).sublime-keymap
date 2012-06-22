@@ -1,0 +1,37 @@
+[
+	{ "keys": ["super+d"], "command": "nico_menu", "args": {"type": "down"} },
+	{ "keys": ["super+u"], "command": "nico_menu", "args": {"type": "up"} },
+
+	{ "keys": ["tab"], "command": "insert_best_completion", "args": {"default": "\t", "exact": false} },
+	{ "keys": ["tab"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" }
+		]
+	},
+	{ "keys": ["tab"], "command": "reindent", "context":
+		[
+			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+		]
+	},
+	{ "keys": ["tab"], "command": "indent", "context":
+		[
+			{ "key": "text", "operator": "regex_contains", "operand": "\n" }
+		]
+	},
+	{ "keys": ["tab"], "command": "next_field", "context":
+		[
+			{ "key": "has_next_field", "operator": "equal", "operand": true }
+		]
+	},
+
+	{ "keys": ["super+v"], "command": "paste_and_indent" },
+	{ "keys": ["super+shift+v"], "command": "paste" },
+
+	{ "keys": ["super+shift+t"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["super+r"], "command": "show_panel", "args": {"panel": "replace"} },
+	{ "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} }
+
+]
