@@ -45,3 +45,11 @@ function cot() {
     end tell
 EOS
 }
+
+
+# fcd - cd to the directory opened by Finder
+#
+function fcd() {
+  cd "`/bin/sh $ZSH_CUSTOM/vendor/fcd.sh`"
+}
+
