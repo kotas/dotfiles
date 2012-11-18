@@ -1,0 +1,17 @@
+[user]
+	name = kotas
+	email = kotas@kotas.jp
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/kotas/.gitignore_global
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	df = diff
+	b = branch
+	dm = diff master
+	dms = diff master --name-status
