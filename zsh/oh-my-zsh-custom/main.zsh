@@ -1,14 +1,13 @@
-##
-## Command Settings
-##
+## ZSH
+unsetopt correct_all
 
-# shell
+## Locale
 export LANG=en_US.UTF-8
 export LANGUAGE=$LANG
 export LC_TYPE=$LANG
 export LC_CTYPE=$LANG
 
-# general
+## general alias
 alias lla='ls -lA'
 alias cp='cp -iv'
 alias rm='rm -iv'
@@ -28,9 +27,14 @@ setopt auto_cd
 setopt NO_flow_control
 function chpwd() { ls }
 
-# javac
-alias javac="javac -J-Dfile.encoding=UTF8"
-
 # svn
 export SVN_EDITOR=vim
 
+# phpbrew
+[[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
+## Load all zsh files in env directory
+for config_file ($ZSH_CUSTOM/env/*.zsh(N)) source $config_file
