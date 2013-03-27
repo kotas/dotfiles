@@ -7,10 +7,12 @@ DOTFILES="
 	git/dot.gitconfig
 	git/dot.gitignore_global
 	vim/dot.vimrc
-	zsh/dot.zshrc
+    vim/dot.vim
+    zsh/dot.zshrc
 "
+
 for FILE in $DOTFILES; do
-	if [ -f "$FILE" ]; then
+	if [ -f "$FILE" -o -d "$FILE" ]; then
 		DEST=`basename "$FILE"`
 		DEST=~/${DEST/dot./.}
 		ln -f -s $DOTFILES_DIR/$FILE $DEST
