@@ -14,10 +14,24 @@ NeoBundle 'scrooloose/nerdcommenter.git'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Align'
 NeoBundle 'YankRing.vim'
-
+NeoBundle 'yuroyoro/smooth_scroll.vim'
+NeoBundle 'eregex.vim'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet.git'
-NeoBundle 'honza/snipmate-snippets'
+
+NeoBundle 'JavaScript-syntax'
+NeoBundle 'jQuery'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'yuroyoro/vim-python'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'tsukkee/unite-tag'
 
 NeoBundle 'tomasr/molokai'
 colorscheme molokai
@@ -66,8 +80,11 @@ set history=1000
 nnoremap j gj
 nnoremap k gk
 "フレームサイズ変更
-map <kPlus> <C-W>+
-map <kMinus> <C-W>-
+nmap > <C-w>>
+nmap < <C-w><
+nmap + <C-W>+
+nmap - <C-W>-
+
 "CTRL-hjklでウィンドウ移動
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -175,4 +192,7 @@ else
   set tags=./tags,./../tags,./*/tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags
 endif
 set notagbsearch
+
+"# 各種 Bundle の設定
+source ~/.vimrc.bundles
 

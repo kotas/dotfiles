@@ -7,6 +7,7 @@ DOTFILES="
 	git/dot.gitconfig
 	git/dot.gitignore_global
 	vim/dot.vimrc
+    vim/dot.vimrc.bundles
     vim/dot.vim
     zsh/dot.zshrc
 "
