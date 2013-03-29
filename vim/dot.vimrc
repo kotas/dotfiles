@@ -56,6 +56,8 @@ set autoread
 syntax on
 "折りたたみ
 set foldmethod=marker
+"カレントディレクトリを自動変更
+set autochdir
 
 "# 検索関連
 set ignorecase
