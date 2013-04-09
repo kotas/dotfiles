@@ -19,6 +19,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "# Align
 let g:Align_xstrlen = 3
 
+"# YankRing
+let g:yankring_history_dir = $HOME.'/.vim/'
+
 "# Syntastic
 " エラー行をsignで表示する
 let g:syntastic_enable_signs = 1
@@ -106,7 +109,11 @@ inoremap <expr><C-n>  pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
 inoremap <expr><C-p> pumvisible() ? "\<C-p>" : "\<C-p>\<C-n>"
 " 補完候補が出ていたら確定、なければ改行
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
-
+" Insert モード中はカーソルキーで移動できるようにする情弱用設定
+inoremap <expr><Left>  pumvisible() ? "\<Left>" : neocomplcache#close_popup() . "\<Left>"
+inoremap <expr><Right> pumvisible() ? "\<Right>" :  neocomplcache#close_popup() . "\<Right>"
+inoremap <expr><Up>    pumvisible() ? "\<Up>" : neocomplcache#close_popup() . "\<Up>"
+inoremap <expr><Down>  pumvisible() ? "\<Down>" : neocomplcache#close_popup() . "\<Down>"
 
 "# Unite
 

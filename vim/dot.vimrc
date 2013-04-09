@@ -21,6 +21,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'sudo.vim'
+NeoBundle 'wincent/Command-T'
 
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'jQuery'
@@ -34,7 +36,6 @@ NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'tsukkee/unite-tag'
 
 NeoBundle 'tomasr/molokai'
-colorscheme molokai
 " }}}
 
 NeoBundleCheck
@@ -78,6 +79,9 @@ nmap g# g#zz
 set history=1000
 
 "# キーマップ
+"leader をスペースに
+nnoremap " " <Nop>
+let mapleader=" "
 "折り返し行に移動
 nnoremap j gj
 nnoremap k gk
@@ -86,7 +90,6 @@ nmap > <C-w>>
 nmap < <C-w><
 nmap + <C-W>+
 nmap - <C-W>-
-
 "CTRL-hjklでウィンドウ移動
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -98,6 +101,8 @@ map <F2> <ESC>:bp<CR>
 map <F3> <ESC>:bn<CR>
 "F4 でバッファ削除
 map <F4> <ESC>:bnext \| bdelete #<CR>
+"Shift+U でリドゥ
+nnoremap U <C-r>
 
 "# 表示関連
 "ステータスバー
@@ -111,31 +116,43 @@ set matchpairs+=<:>
 set showcmd
 "モード表示
 set showmode
-"全角スペースに下線表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
+"全角スペースハイライト
+augroup highlightZenkakuSpace
+  autocmd!
+  autocmd ColorScheme * highlight ZenkakuSpace cterm=underline ctermbg=darkgreen guibg=darkgreen
+  autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+augroup END
 "カーソル行ハイライト
 set cursorline
-"ただしカレントウィンドウのみ
-augroup cch
-	autocmd! cch
-	autocmd WinLeave * set nocursorline
-	autocmd WinEnter,BufRead * set cursorline
+"カレントウィンドウのみ
+augroup highlightCursorLine
+  autocmd!
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+  autocmd ColorScheme * highlight clear CursorLine
+  autocmd ColorScheme * highlight CursorLine ctermbg=black guibg=black
 augroup END
-"下線じゃなくて背景色を黒に
-highlight clear CursorLine
-highlight CursorLine ctermbg=black guibg=black
+"不可視文字
+set list
+set listchars=tab:>\ ,trail:\ ,extends:<,precedes:>,nbsp:%
+augroup highlighListChars
+  autocmd!
+  autocmd ColorScheme * highlight clear SpecialKey
+  autocmd ColorScheme * highlight SpecialKey ctermfg=black guibg=#222222
+augroup END
 "コマンド実行中の再描画抑制
 set lazyredraw
 "高速TTY
 set ttyfast
 "スクロールに余裕をもたせる
 set scrolloff=5
+"カラースキーマ
+colorscheme molokai
 
 "# 補完
 set wildmenu
 set wildchar=<tab>
-set wildmode=list:full
+set wildmode=longest:full
 "辞書を補完に追加
 set complete+=k
 "XML 閉じタグ補完
@@ -151,11 +168,6 @@ set cindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-"幅が不明な文字は2文字幅扱い
-set ambiwidth=double
-"タブの左側にカーソル
-set list
-set listchars=tab:\ \ 
 "行末行頭を超えてカーソル移動
 set whichwrap+=h,l,<,>,[,],b,s,~
 "バックスペースで色々消せるように
