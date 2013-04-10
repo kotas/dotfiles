@@ -1,5 +1,11 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_face": "Ricty Discord",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"theme": "Soda Light.sublime-theme",
-	"font_size": 13.0
+	"word_wrap": false
 }
