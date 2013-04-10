@@ -34,6 +34,23 @@ function up() {
   )
 }
 
+# upr - Go to the root of the current project
+# (Using .svn/.git for detecting the root)
+#
+function upr() {
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    cd `pwd`/`git rev-parse --show-cdup`
+  elif [ -d .svn ]; then
+    dir=`pwd`
+    while [ -d $dir/../.svn ]; do
+      dir=$dir/..
+    done
+    cd $dir
+  else
+    echo "Not in project directory" >&2
+    return 1
+  fi
+}
 
 # cot - Open in CotEditor
 #
