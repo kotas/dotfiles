@@ -42,7 +42,7 @@ NeoBundleCheck
 
 "# エンコーディング・行末関連
 set encoding=utf-8
-set fencs=utf-8,euc-jp,iso-2022-jp,cp932
+set fencs=iso-2022-jp,euc-jp,utf-8,cp932
 set fileformats=unix,dos,mac
 set textwidth=0
 
