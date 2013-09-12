@@ -25,16 +25,23 @@ export LESS='-R'
 setopt auto_pushd
 setopt auto_cd
 setopt NO_flow_control
-function chpwd() { ls }
 
 # svn
 export SVN_EDITOR=vim
 
 # phpbrew
-[[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
+if [ -s "$HOME/.phpbrew/bashrc" ]; then
+    source "$HOME/.phpbrew/bashrc"
+elif [ -d "$HOME/.phpenv/bin" ]; then
+    export PATH="$HOME/.phpenv/bin:$PATH"
+    eval "$(phpenv init -)"
+fi
 
 # pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
+# rbenv
+[[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
 ## Load all zsh files in env directory
 for config_file ($ZSH_CUSTOM/env/*.zsh(N)) source $config_file
