@@ -1,6 +1,7 @@
 
 # http://qiita.com/yuyuchu3333/items/b10542db482c3ac8b059
 chpwd() {
+    echo "$fg[green]$(pwd)$reset_color"
     ls_abbrev
 }
 ls_abbrev() {

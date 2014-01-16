@@ -43,5 +43,11 @@ fi
 # rbenv
 [[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
+# nvm
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+
+# alias
+alias mate="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+
 ## Load all zsh files in env directory
 for config_file ($ZSH_CUSTOM/env/*.zsh(N)) source $config_file

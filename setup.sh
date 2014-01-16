@@ -6,6 +6,7 @@ DOTFILES_DIR=`pwd`
 DOTFILES="
 	git/dot.gitconfig
 	git/dot.gitignore_global
+	tmux/dot.tmux.conf
 	vim/dot.vimrc
     vim/dot.vimrc.bundles
     vim/dot.vim

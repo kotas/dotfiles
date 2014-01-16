@@ -5,6 +5,7 @@
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/kotas/.gitignore_global
+	editor = vim
 [color]
 	ui = auto
 [alias]
@@ -15,3 +16,4 @@
 	b = branch
 	dm = diff master
 	dms = diff master --name-status
+	pr = pull --rebase --prune
