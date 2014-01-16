@@ -43,7 +43,7 @@ cask install fluid
 cask install github
 cask install google-chrome
 cask install growlnotify
-cask install iterm2
+cask install iterm2-beta
 cask install mosh
 cask install nvalt
 cask install phpstorm
