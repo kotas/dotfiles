@@ -10,6 +10,7 @@ upgrade
 tap homebrew/versions || true
 tap homebrew/binary || true
 tap phinze/homebrew-cask || true
+tap caskroom/versions || true
 tap monochromegane/sg || true
 
 # Packages
@@ -49,6 +50,7 @@ cask install phpstorm
 cask install qlimagesize
 cask install qlmarkdown
 cask install stay
+cask install sublime-text3
 cask install virtualbox
 cask install vagrant
 
