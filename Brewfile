@@ -46,6 +46,7 @@ cask install growlnotify
 cask install iterm2-beta
 cask install mosh
 cask install nvalt
+cask install onepassword
 cask install phpstorm
 cask install qlimagesize
 cask install qlmarkdown
