@@ -1,6 +1,7 @@
 [submodule "vim/dot.vim/bundle/neobundle.vim"]
 	path = vim/dot.vim/bundle/neobundle.vim
 	url = git://github.com/Shougo/neobundle.vim
+	branch = master
 [submodule "zsh/oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/oh-my-zsh-custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
