@@ -30,12 +30,7 @@ setopt NO_flow_control
 export SVN_EDITOR=vim
 
 # phpbrew
-if [ -s "$HOME/.phpbrew/bashrc" ]; then
-    source "$HOME/.phpbrew/bashrc"
-elif [ -d "$HOME/.phpenv/bin" ]; then
-    export PATH="$HOME/.phpenv/bin:$PATH"
-    eval "$(phpenv init -)"
-fi
+[[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
 
 # pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"

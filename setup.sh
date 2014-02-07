@@ -8,9 +8,9 @@ DOTFILES="
 	git/dot.gitignore_global
 	tmux/dot.tmux.conf
 	vim/dot.vimrc
-    vim/dot.vimrc.bundles
-    vim/dot.vim
-    zsh/dot.zshrc
+	vim/dot.vimrc.bundles
+	vim/dot.vim
+	zsh/dot.zshrc
 "
 
 echo "*** Symlinking dotfiles"
@@ -31,6 +31,11 @@ for FILE in $DOTFILES; do
 	fi
 done
 
+if [ ! -d ~/.oh-my-zsh ]; then
+	echo "*** Installing oh-my-zsh"
+	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+fi
+
 if [ ! -h ~/.oh-my-zsh/custom ]; then
 	rm -fr ~/.oh-my-zsh/custom
 	echo "removed:" ~/.oh-my-zsh/custom
@@ -44,7 +49,7 @@ if [ ! -d ~/bin ]; then
 fi
 
 echo "*** Copying bin/* into ~/bin/"
-cp -f $DOTFILES_DIR/bin/* ~/bin/
+rsync -ac $DOTFILES_DIR/bin/ ~/bin/
 
 if [ ! -f /usr/local/bin/brew ]; then
 	echo "*** Installing Homebrew"
@@ -67,6 +72,7 @@ if [ ! -d ~/.rbenv ]; then
 	echo "*** Installing rbenv"
 	git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 	git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+	git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
 fi
 
 if [ ! -d ~/.nvm ]; then
