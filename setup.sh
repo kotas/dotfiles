@@ -78,5 +78,13 @@ fi
 
 if [ ! -d ~/.nvm ]; then
 	echo "*** Installing nvm"
-	git clone https://github.com/creationix/nvm.git ~/.nvm
+	git clone https://github.com/creationix/nvm.git ~/.nvm \
+	source "$HOME/.nvm/nvm.sh"
+	latest_version=`nvm ls-remote | grep v0.10 | tail -n1`
+	echo "*** Installing node $latest_version"
+	nvm install $latest_version
+	nvm alias default $latest_version
+	nvm use $latest_version
+	echo "*** Installing npm packages"
+	npm install -g mocha testem grunt bower gulp phantomjs
 fi
