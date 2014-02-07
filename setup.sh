@@ -31,6 +31,9 @@ for FILE in $DOTFILES; do
 	fi
 done
 
+echo "*** git submodule update"
+git submodule update --init
+
 if [ ! -d ~/.oh-my-zsh ]; then
 	echo "*** Installing oh-my-zsh"
 	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
