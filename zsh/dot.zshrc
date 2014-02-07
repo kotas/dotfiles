@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="wedisagree"
-plugins=(gitfast osx brew ruby bundler rake bower composer npm urltools)
+plugins=(gitfast osx brew ruby bundler rake bower composer npm urltools zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
