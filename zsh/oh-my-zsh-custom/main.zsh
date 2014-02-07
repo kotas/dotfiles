@@ -25,6 +25,7 @@ export LESS='-R'
 setopt auto_pushd
 setopt auto_cd
 setopt NO_flow_control
+chpwd() { ls }
 
 # svn
 export SVN_EDITOR=vim
