@@ -42,6 +42,9 @@ export SVN_EDITOR=vim
 # nvm
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
+# docker
+export DOCKER_HOST=tcp://
+
 # alias
 alias mate="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
