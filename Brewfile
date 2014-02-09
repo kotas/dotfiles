@@ -33,6 +33,8 @@ install tmux
 install tree
 install watch
 install wget
+install docker
+install boot2docker
 
 # .dmg
 cask install coteditor
