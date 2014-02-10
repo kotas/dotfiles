@@ -35,6 +35,7 @@ install watch
 install wget
 install docker
 install boot2docker
+install qt
 
 # .dmg
 cask install coteditor
