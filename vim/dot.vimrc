@@ -29,6 +29,7 @@ NeoBundle 'jQuery'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'yuroyoro/vim-python'
+NeoBundle 'leafgarland/typescript-vim'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tsukkee/unite-help'
