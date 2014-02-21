@@ -36,12 +36,13 @@ install wget
 install docker
 install boot2docker
 install qt
+install imagemagick
+install heroku-toolbelt
 
 # .dmg
 cask install coteditor
 cask install dropbox
 cask install firefox
-cask install flash
 cask install fluid
 cask install github
 cask install google-chrome
@@ -50,7 +51,6 @@ cask install iterm2-beta
 cask install mosh
 cask install nvalt
 cask install onepassword
-cask install phpstorm
 cask install qlimagesize
 cask install qlmarkdown
 cask install stay
