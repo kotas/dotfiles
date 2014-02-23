@@ -77,6 +77,7 @@ if [ ! -d ~/.rbenv ]; then
 	git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 	git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
 	git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+	git clone https://github.com/sstephenson/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars
 fi
 
 if [ ! -d ~/.nvm ]; then
