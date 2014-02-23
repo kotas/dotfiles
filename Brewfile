@@ -16,6 +16,7 @@ tap monochromegane/sg || true
 # Packages
 install brew-cask
 install curl
+install curl-ca-bundle
 install zsh
 install git
 install jq

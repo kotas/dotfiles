@@ -45,6 +45,10 @@ export SVN_EDITOR=vim
 # docker
 export DOCKER_HOST=tcp://
 
+# curl-ca-bundle
+[[ -s "/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt" ]] && \
+  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
 # alias
 alias mate="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
