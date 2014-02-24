@@ -17,3 +17,4 @@
 	dm = diff master
 	dms = diff master --name-status
 	pr = pull --rebase --prune
+	cie = commit --allow-empty
