@@ -18,3 +18,4 @@
 	dms = diff master --name-status
 	pr = pull --rebase --prune
 	cie = commit --allow-empty
+	bm = !sh -c \"git checkout -b $1 && git commit --allow-empty -m \\\"Start branch $1\\\"\" -
