@@ -30,17 +30,17 @@ chpwd() { ls }
 # svn
 export SVN_EDITOR=vim
 
-# phpbrew
-[[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
+# phpenv
+[[ -d "$HOME/.phpenv/bin" ]] && export PATH="$HOME/.phpenv/bin:$PATH" && eval "$(phpenv init -)"
 
 # pythonbrew
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # rbenv
-[[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # nvm
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 
 # docker
 export DOCKER_HOST=tcp://

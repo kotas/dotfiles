@@ -12,6 +12,7 @@ tap homebrew/binary || true
 tap phinze/homebrew-cask || true
 tap caskroom/versions || true
 tap monochromegane/sg || true
+tap josegonzalez/homebrew-php || true
 
 # Packages
 install brew-cask
@@ -39,6 +40,15 @@ install boot2docker
 install qt
 install imagemagick
 install heroku-toolbelt
+install ruby-build
+install rbenv
+install rbenv-gem-rehash
+install rbenv-binstubs
+install rbenv-vars
+install rbenv-default-gems
+install nvm
+install pyenv
+install phpenv
 
 # .dmg
 cask install coteditor
