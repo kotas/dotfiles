@@ -44,6 +44,7 @@ brew bundle
 
 section "Set up rbenv"
 if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
   RUBY_VERSION=2.1.0
 
   if [[ $(rbenv versions | grep -c "$RUBY_VERSION") == 0 ]]; then
@@ -54,6 +55,7 @@ if which rbenv > /dev/null; then
 fi
 
 section "Set up nvm"
+[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 if which nvm > /dev/null; then
   NODE_VERSION=`nvm ls-remote | grep v0.10 | tail -n1`
 
