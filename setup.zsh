@@ -12,6 +12,7 @@ symlink vim/dot.vimrc              ~/.vimrc
 symlink vim/dot.vimrc.bundles      ~/.vimrc
 symlink vim/dot.vim                ~/.vim
 symlink zsh/dot.zshrc              ~/.zshrc
+symlink rbenv/dot.gemrc            ~/.gemrc
 
 create_dir ~/.rbenv
 symlink rbenv/default-gems         ~/.rbenv/default-gems
