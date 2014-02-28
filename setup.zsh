@@ -34,6 +34,12 @@ section "Set up ~/bin"
 create_dir ~/bin
 rsync -acu bin/ ~/bin/
 
+if [[ ! -e ~/bin/sdif ]]; then
+  section "Install sdif"
+  wget -O $HOME/bin/sdif https://raw.github.com/kaz-utashiro/sdif/master/sdif
+  chmod +x ~/bin/sdif
+fi
+
 if ! which brew > /dev/null; then
   section "Install Homebrew"
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
