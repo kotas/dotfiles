@@ -65,6 +65,7 @@ section "Set up nvm"
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 if which nvm > /dev/null; then
   NODE_VERSION=`nvm ls-remote | grep v0.10 | tail -n1`
+  NPM_PACKAGES=(mocha testem grunt bower gulp phantomjs)
 
   if [[ $(nvm ls | grep -c "$NODE_VERSION") == 0 ]]; then
     section "Install node $NODE_VERSION"
@@ -73,8 +74,8 @@ if which nvm > /dev/null; then
     nvm use $NODE_VERSION
   fi
 
-  section "Install npm packages"
-  npm install -g mocha testem grunt bower gulp phantomjs
+  section "Update npm"
+  npm update -g $NPM_PACKAGES
 fi
 
 section "Done"
