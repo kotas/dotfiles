@@ -66,6 +66,7 @@ cask install qlimagesize
 cask install qlmarkdown
 cask install stay
 cask install sublime-text3
+cask install mongohub
 cask install virtualbox
 cask install vagrant
 
