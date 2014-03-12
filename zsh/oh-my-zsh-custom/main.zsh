@@ -42,8 +42,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # nvm
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 
-# docker
-export DOCKER_HOST=tcp://
+# boot2docker
+export DOCKER_HOST=tcp://localhost:4243
 
 # curl-ca-bundle
 [[ -s "/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt" ]] && \
