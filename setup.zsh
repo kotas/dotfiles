@@ -37,7 +37,7 @@ rsync -acu bin/ ~/bin/
 
 if [[ ! -e ~/bin/sdif ]]; then
   section "Install sdif"
-  wget -O $HOME/bin/sdif https://raw.github.com/kaz-utashiro/sdif/master/sdif
+  curl https://raw.github.com/kaz-utashiro/sdif/master/sdif > ~/bin/sdif
   chmod +x ~/bin/sdif
 fi
 
