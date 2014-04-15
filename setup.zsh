@@ -9,7 +9,7 @@ symlink git/dot.gitconfig          ~/.gitconfig
 symlink git/dot.gitignore_global   ~/.gitignore_global
 symlink tmux/dot.tmux.conf         ~/.tmux.conf
 symlink vim/dot.vimrc              ~/.vimrc
-symlink vim/dot.vimrc.bundles      ~/.vimrc
+symlink vim/dot.vimrc.bundles      ~/.vimrc.bundles
 symlink vim/dot.vim                ~/.vim
 symlink zsh/dot.zshrc              ~/.zshrc
 symlink rbenv/dot.gemrc            ~/.gemrc
