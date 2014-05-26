@@ -17,7 +17,6 @@ tap josegonzalez/homebrew-php || true
 # Packages
 install brew-cask
 install curl
-install curl-ca-bundle
 install zsh
 install git
 install jq
