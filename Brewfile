@@ -48,6 +48,7 @@ install rbenv-default-gems
 install nvm
 install pyenv
 install phpenv
+install direnv
 
 # .dmg
 cask install alfred

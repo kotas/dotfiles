@@ -42,6 +42,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # nvm
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 
+# direnv
+if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
+
 # boot2docker
 export DOCKER_HOST=tcp://localhost:4243
 
