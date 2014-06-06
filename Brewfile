@@ -50,6 +50,7 @@ install pyenv
 install phpenv
 
 # .dmg
+cask install alfred
 cask install coteditor
 cask install dropbox
 cask install firefox
