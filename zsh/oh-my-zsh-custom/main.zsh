@@ -54,6 +54,7 @@ export DOCKER_HOST=tcp://localhost:4243
 
 # alias
 alias mate="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ag=pt
 
 ## Load all zsh files in env directory
 for config_file ($ZSH_CUSTOM/env/*.zsh(N)) source $config_file

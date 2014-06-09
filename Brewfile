@@ -11,7 +11,7 @@ tap homebrew/versions || true
 tap homebrew/binary || true
 tap caskroom/cask || true
 tap caskroom/versions || true
-tap monochromegane/sg || true
+tap monochromegane/pt || true
 tap josegonzalez/homebrew-php || true
 
 # Packages
@@ -26,8 +26,7 @@ install phantomjs
 install casperjs
 install reattach-to-user-namespace
 install autossh
-install ag
-install sg
+install pt
 install pstree
 install tig
 install tmux
