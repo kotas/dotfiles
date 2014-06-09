@@ -9,7 +9,7 @@ upgrade
 # Add repositories
 tap homebrew/versions || true
 tap homebrew/binary || true
-tap phinze/homebrew-cask || true
+tap caskroom/cask || true
 tap caskroom/versions || true
 tap monochromegane/sg || true
 tap josegonzalez/homebrew-php || true
@@ -51,25 +51,25 @@ install phpenv
 install direnv
 
 # .dmg
-cask install alfred
-cask install coteditor
-cask install dropbox
-cask install firefox
-cask install fluid
-cask install github
-cask install google-chrome
-cask install growlnotify
-cask install iterm2-beta
-cask install mosh
-cask install nvalt
-cask install onepassword
-cask install qlimagesize
-cask install qlmarkdown
-cask install stay
-cask install sublime-text3
-cask install mongohub
-cask install virtualbox
-cask install vagrant
+cask install alfred || true
+cask install coteditor || true
+cask install dropbox || true
+cask install firefox || true
+cask install fluid || true
+cask install github || true
+cask install google-chrome || true
+cask install growlnotify || true
+cask install iterm2-beta || true
+cask install mosh || true
+cask install nvalt || true
+cask install onepassword || true
+cask install qlimagesize || true
+cask install qlmarkdown || true
+cask install stay || true
+cask install sublime-text3 || true
+cask install mongohub || true
+cask install virtualbox || true
+cask install vagrant || true
 
 # Remove outdated versions
 cleanup
