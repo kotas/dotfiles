@@ -62,6 +62,7 @@ cask install iterm2-beta || true
 cask install mosh || true
 cask install nvalt || true
 cask install onepassword || true
+cask install pg-commander || true
 cask install qlimagesize || true
 cask install qlmarkdown || true
 cask install stay || true
