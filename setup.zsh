@@ -64,7 +64,7 @@ fi
 section "Set up nvm"
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && source "/usr/local/opt/nvm/nvm.sh"
 if which nvm > /dev/null; then
-  NODE_VERSION=`nvm ls-remote | grep v0.10 | tail -n1`
+  NODE_VERSION=`nvm_remote_version v0.10`
   NPM_PACKAGES=(mocha testem grunt bower gulp phantomjs)
 
   if [[ $(nvm ls | grep -c "$NODE_VERSION") == 0 ]]; then
