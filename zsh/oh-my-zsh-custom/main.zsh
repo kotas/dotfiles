@@ -48,9 +48,8 @@ if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 # boot2docker
 export DOCKER_HOST=tcp://localhost:4243
 
-# curl-ca-bundle
-[[ -s "/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt" ]] && \
-  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+# golang
+export GOPATH=$HOME
 
 # alias
 alias mate="$HOME/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

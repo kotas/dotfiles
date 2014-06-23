@@ -21,3 +21,5 @@
 	cie = commit --allow-empty
 	bm = !sh -c \"git checkout -b $1 && git commit --allow-empty -m \\\"Start branch $1\\\"\" -
 	cleanup = !sh -c \"git branch --merged | grep -v master | grep -v \\* | xargs -n 1 git branch -d\"
+[ghq]
+	root = ~/src

@@ -13,6 +13,7 @@ tap caskroom/cask || true
 tap caskroom/versions || true
 tap monochromegane/pt || true
 tap josegonzalez/homebrew-php || true
+tap peco/peco || true
 
 # Packages
 install brew-cask
@@ -48,6 +49,8 @@ install nvm
 install pyenv
 install phpenv
 install direnv
+install go
+install peco
 
 # .dmg
 cask install alfred || true

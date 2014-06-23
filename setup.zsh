@@ -78,5 +78,10 @@ if which nvm > /dev/null; then
   npm update -g $NPM_PACKAGES
 fi
 
+if ! which ghq > /dev/null; then
+  section "Set up ghq"
+  GOPATH=$HOME go get github.com/motemen/ghq
+fi
+
 section "Done"
 echo 'Allora, ragazzi, cominciamo a lavorare!!'
