@@ -13,6 +13,7 @@
 	ci = commit
 	co = checkout
 	df = diff
+	dfc = diff --cached
 	b = branch
 	dm = diff master
 	dms = diff master --name-status
