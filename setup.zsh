@@ -52,7 +52,7 @@ brew bundle
 section "Set up rbenv"
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
-  RUBY_VERSION=2.1.0
+  RUBY_VERSION=2.1.2
 
   if [[ $(rbenv versions | grep -c "$RUBY_VERSION") == 0 ]]; then
     section "Install ruby $RUBY_VERSION"
