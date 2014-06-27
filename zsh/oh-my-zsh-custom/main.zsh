@@ -46,7 +46,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 
 # boot2docker
-export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # golang
 export GOPATH=$HOME
