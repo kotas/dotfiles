@@ -7,7 +7,7 @@ function install_prezto {
 
 function update_prezto {
   pushd "${ZDOTDIR:-$HOME}/.zprezto"
-  git pull
+  git pull --rebase --prune
   git submodule update --init --recursive
   popd
 }
