@@ -1,0 +1,25 @@
+[user]
+  name = kotas
+  email = kotas.nico@gmail.com
+[credential]
+  helper = osxkeychain
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = auto
+[alias]
+  s = status
+  st = status
+  c = cz
+  ci = cz
+  co = checkout
+  b = branch
+  d = diff
+  df = diff
+  ds = diff --staged
+  pr = pull --rebase
+  prr = pull --rebase --prune
+  r = rebase
+  rc = rebase --continue
+  ra = rebase --abort

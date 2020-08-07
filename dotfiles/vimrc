@@ -1,0 +1,108 @@
+set nocompatible
+scriptencoding utf-8
+
+" dein
+"------
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+" File
+"------
+set encoding=utf-8
+set fencs=utf-8,euc-jp,cp932,iso-2022-jp
+set fileencoding=utf-8
+set fileformats=unix,dos,mac
+set nobackup
+set noswapfile
+set autoread
+set autochdir
+
+" Search
+"--------
+set history=1000
+set ignorecase
+set smartcase
+set wrapscan
+set incsearch
+set hlsearch
+
+" Keybindings
+"-------------
+nnoremap j gj
+nnoremap k gk
+nnoremap <Tab> <c-w>w
+nnoremap <s-Tab> <c-w>W
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+
+" Indent
+"--------
+filetype plugin indent on
+set autoindent
+set smartindent
+set cindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set whichwrap+=h,l,<,>,[,],b,s,~
+set backspace=indent,eol,start
+
+" View
+"------
+set term=xterm-256color
+set background=dark
+colorscheme hybrid
+syntax on
+
+set foldmethod=marker
+set textwidth=0
+set scrolloff=5
+set lazyredraw
+set ttyfast
+set list
+set listchars=tab:>\ ,trail:\ ,extends:<,precedes:>,nbsp:%
+set showmatch
+set matchpairs+=<:>
+set showcmd
+set showmode
+set cursorline
+
+augroup highlightCursorLine
+  autocmd!
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+  autocmd ColorScheme * highlight clear CursorLine
+  autocmd ColorScheme * highlight CursorLine ctermbg=black guibg=black
+augroup END
+
+" Completion
+"------------
+set wildmenu
+set wildchar=<tab>
+set wildmode=longest:full
+
+"-------------
+"# fzf
+set rtp+=/usr/local/opt/fzf

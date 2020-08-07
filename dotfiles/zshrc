@@ -1,0 +1,35 @@
+# Prezto
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Preferred zsh options
+unsetopt correct_all
+
+# Alias
+alias lla='ls -lA'
+alias mate=code
+alias ag=pt
+alias diff='command diff'  # for Prezto
+
+# ls on cd
+chpwd() { ls }
+
+# golang
+export GOPATH=$HOME
+
+# homebrew-file
+export HOMEBREW_BREWFILE="$HOME/.brewfile"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# nodebrew
+path=(~/.nodebrew/current/bin(N-/) $path)
+
+# ~/bin
+path=(~/bin(N-/) $path)
+
+# Load .zsh/*.zsh
+for zshfile in ~/.zsh/*.zsh; do . $zshfile; done
+
+# Load .zshrc.local
+[ -s ~/.zshrc.local ] && . ~/.zshrc.local
