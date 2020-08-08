@@ -1,6 +1,5 @@
 cask "alfred"
 cask "appcleaner"
-cask "bitwarden"
 cask "devdocs"
 cask "dropbox"
 cask "google-chrome"
@@ -56,3 +55,4 @@ brew "zsh"
 
 mas "Pixelmator", id: 407963104
 mas "CotEditor", id: 1024640650
+mas "Bitwarden", id: 1352778147
