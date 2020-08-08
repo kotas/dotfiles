@@ -28,8 +28,5 @@ path=(~/.nodebrew/current/bin(N-/) $path)
 # ~/bin
 path=(~/bin(N-/) $path)
 
-# Load .zsh/*.zsh
-for zshfile in ~/.zsh/*.zsh; do . $zshfile; done
-
 # Load .zshrc.local
 [ -s ~/.zshrc.local ] && . ~/.zshrc.local
