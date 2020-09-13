@@ -4,3 +4,5 @@ cd `dirname $0`
 source helpers/installer.zsh
 
 dotfiles_install $*
+
+exec $SHELL -l

@@ -1,6 +1,7 @@
-[user]
-  name = kotas
-  email = kotas.nico@gmail.com
+# user.name and user.email should be set in ~/.gitconfig.local
+
+[include]
+  path = ~/.gitconfig.local
 [credential]
   helper = osxkeychain
 [core]
@@ -11,8 +12,8 @@
 [alias]
   s = status
   st = status
-  c = cz
-  ci = cz
+  c = commit
+  ci = commit
   co = checkout
   b = branch
   d = diff

@@ -103,7 +103,3 @@ augroup END
 set wildmenu
 set wildchar=<tab>
 set wildmode=longest:full
-
-"-------------
-"# fzf
-set rtp+=/usr/local/opt/fzf

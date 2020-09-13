@@ -8,25 +8,25 @@ unsetopt correct_all
 
 # Alias
 alias lla='ls -lA'
-alias mate=code
 alias ag=pt
 alias diff='command diff'  # for Prezto
 
 # ls on cd
 chpwd() { ls }
 
+# ~/bin
+path=(~/bin(N-/) $path)
+
 # golang
 export GOPATH=$HOME
 
-# homebrew-file
+# homebrew
+export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_BREWFILE="$HOME/.brewfile"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# nodebrew
-path=(~/.nodebrew/current/bin(N-/) $path)
-
-# ~/bin
-path=(~/bin(N-/) $path)
+# asdf
+. $(brew --prefix asdf)/asdf.sh
 
 # Load .zshrc.local
 [ -s ~/.zshrc.local ] && . ~/.zshrc.local

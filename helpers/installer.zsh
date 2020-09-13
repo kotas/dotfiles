@@ -8,7 +8,7 @@ function dotfiles_run_installers {
   local -a installers
   if [ $# -gt 0 ]; then
     for command in $*; do
-      source installers/$command.zsh
+      source installers/*_$command.zsh
     done
   else
     for file in $(ls installers/*.zsh); do

@@ -7,5 +7,4 @@ function update_homebrew {
   brew bundle
 }
 
-# Prepend to the array to be always first
-installers=(homebrew $installers)
+installers+=(homebrew)

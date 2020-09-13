@@ -5,6 +5,11 @@ function install_dein {
 }
 
 function update_dein {
+  ls -d ~/.vim/bundles/repos/github.com/*/* | while read dir; do
+    pushd "$dir"
+    git pull --rebase --prune
+    popd
+  done
 }
 
 installers+=(dein)
