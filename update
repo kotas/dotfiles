@@ -1,8 +1,0 @@
-#!/bin/zsh
-set -e
-cd `dirname $0`
-source helpers/installer.zsh
-
-dotfiles_update $*
-
-exec $SHELL -l

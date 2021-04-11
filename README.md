@@ -4,17 +4,13 @@ Supports M1 Mac only.
 
 ## Usage
 
-To install everything:
+To install or update everything:
 
     $ ./install
 
-To update everything:
+Or, partially:
 
-    $ ./update
-
-Or, partially update:
-
-    $ ./update node
+    $ ./install node
 
 See [installers](installers/) for details.
 
