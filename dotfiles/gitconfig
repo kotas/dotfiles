@@ -7,8 +7,11 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
+	pager = git-split-diffs --color | less -RFX
 [color]
   ui = auto
+[pull]
+  rebase = true
 [alias]
   s = status
   st = status
