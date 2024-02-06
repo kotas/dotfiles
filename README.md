@@ -20,6 +20,7 @@ See [installers](installers/) for details.
 - [Prezto](https://github.com/sorin-ionescu/prezto) for shell theme and modules
 - [Homebrew](http://brew.sh/) for package management
 - [rcm](https://github.com/thoughtbot/rcm) for dotfiles management
+- [mise](https://mise.jdx.dev/) for version management
 - [asdf-vm](https://asdf-vm.com/) for version management
 
 ## Note on files
