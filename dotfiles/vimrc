@@ -1,28 +1,17 @@
 set nocompatible
 scriptencoding utf-8
 
-" dein
+" vim-plug
 "------
-if &compatible
-  set nocompatible
-endif
+call plug#begin()
 
-set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
+Plug 'w0ng/vim-hybrid'
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'rhysd/committia.vim'
+Plug 'yuroyoro/smooth_scroll.vim'
 
-if dein#load_state('~/.vim/bundles')
-  call dein#begin('~/.vim/bundles')
-  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
-
-  let s:toml = expand('~/.vim/rc/dein.toml')
-  call dein#load_toml(s:toml, {'lazy': 0})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
+call plug#end()
+" Execute :PlugInstall on vim
 
 " File
 "------

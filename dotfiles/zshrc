@@ -7,8 +7,9 @@ fi
 unsetopt correct_all
 
 # Alias
-alias lla='ls -lA'
-alias ls=exa
+alias ls=eza
+alias ll='eza -l'
+alias lla='eza -lA'
 alias cat=bat
 alias ps=procs
 alias ag=pt
@@ -28,8 +29,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_BREWFILE="$HOME/.brewfile"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# asdf
-. $(brew --prefix asdf)/asdf.sh
+# mise
+eval "$(mise activate zsh)"
 
 # Load .zshrc.local
 [ -s ~/.zshrc.local ] && . ~/.zshrc.local
