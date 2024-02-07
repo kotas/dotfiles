@@ -1,10 +1,8 @@
-# Prezto
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Preferred zsh options
 unsetopt correct_all
+
+# language
+export LANG='en_US.UTF-8'
 
 # Alias
 alias ls=eza
@@ -13,21 +11,42 @@ alias lla='eza -lA'
 alias cat=bat
 alias ps=procs
 alias ag=pt
-alias diff='command diff'  # for Prezto
+alias diff='command diff'
+
+# browser on Mac
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi
+
+# editors
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+
+if (( $#commands[(i)lesspipe(|.sh)] )); then
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+fi
 
 # ls on cd
 chpwd() { ls }
 
-# ~/bin
-path=(~/bin(N-/) $path)
+# PATH
+typeset -gU cdpath fpath mailpath path
+path=(~/bin(N-/) /usr/local/{bin,sbin} /opt/homebrew/bin $path)
 
 # golang
 export GOPATH=$HOME
 
 # homebrew
-export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_BREWFILE="$HOME/.brewfile"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Sheldon
+eval "$(sheldon source)"
+
+# Starship
+eval "$(starship init zsh)"
 
 # mise
 eval "$(mise activate zsh)"

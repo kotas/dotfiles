@@ -1,7 +1,5 @@
 # :herb: dotfiles by @kotas
 
-Supports M1 Mac only.
-
 ## Usage
 
 To install or update everything:
@@ -10,18 +8,18 @@ To install or update everything:
 
 Or, partially:
 
-    $ ./install node
+    $ ./install homebrew
 
 See [installers](installers/) for details.
 
 ## Tools
 
 - [zsh](http://www.zsh.org/) for default shell (uses `/bin/zsh`)
-- [Prezto](https://github.com/sorin-ionescu/prezto) for shell theme and modules
+- [Sheldon](https://sheldon.cli.rs/) for shell plugin management
+- [Starship](https://starship.rs/) for shell prompt
 - [Homebrew](http://brew.sh/) for package management
 - [rcm](https://github.com/thoughtbot/rcm) for dotfiles management
-- [mise](https://mise.jdx.dev/) for version management
-- [asdf-vm](https://asdf-vm.com/) for version management
+- [mise](https://mise.jdx.dev/) for language version management
 
 ## Note on files
 
@@ -31,5 +29,3 @@ See [installers](installers/) for details.
 ## License
 
 Public domain.
-
-Some files in `dotfiles/` are copied from Prezto project, and modified by me.
