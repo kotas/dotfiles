@@ -30,10 +30,13 @@ github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
+[plugins.autojump]
+github = "wting/autojump"
+dir = "bin"
+apply = ["PATH", "source"]
+
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]
 
-[plugins.enhancd]
-github = "b4b4r07/enhancd"
-apply = ["defer"]
+
