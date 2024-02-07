@@ -37,3 +37,6 @@ apply = ["defer"]
 [plugins.enhancd]
 github = "b4b4r07/enhancd"
 apply = ["defer"]
+
+[plugins.enhancd-settings]
+inline = 'export ENHANCD_ENABLE_DOUBLE_DOT=false'
